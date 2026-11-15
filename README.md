@@ -1,6 +1,6 @@
 # Pre-eclampsia Early-Warning Wearable — Research Prototype
 
-A low-cost embedded-systems prototype exploring whether **ECG and PPG signal trends** can be captured together and studied as pulse-arrival-time (PAT) features.
+A low-cost embedded-systems prototype exploring whether **ECG and PPG signal trends** can be captured together and studied as pulse-arrival-time (PAT) features with light weight AI model (TinyML) .
 
 This repository is a firmware development scaffold for an ESP32-C3 SuperMini, an AD8232 ECG module and a MAX30102 optical sensor. It is intended for learning, signal-acquisition experiments and supervised research—not clinical use.
 
