@@ -57,7 +57,7 @@ A thermistor and urine-strip colour reader are intentionally out of the current 
 | MAX30102 SCL | GPIO7 | I²C clock |
 | MAX30102 INT | Not connected | Optional; FIFO is polled in the current scaffold |
 | Push button | GPIO5 | Button to GND; uses `INPUT_PULLUP` |
-| RGB LED R/G/B | Not assigned | Choose and verify pins before wiring |
+| RGB LED R/G/B | 0 1 20| Choose and verify pins before wiring |
 
 **Important:** ESP32-C3 SuperMini boards vary. Check the silkscreen and board schematic before connecting anything. GPIO availability and boot/USB functions can vary between board revisions. The proposed GPIO5 button assignment must be verified against the exact board revision before use.
 
@@ -102,17 +102,6 @@ The intended data model has three separate layers:
 A reset/recalibration action must not erase the original reference or research history. Population-level pregnancy blood-pressure data must remain separate from an individual's PAT data. Do not insert population BP values as PAT thresholds or treat population averages as a personal baseline.
 
 Any thresholds in this repository are **engineering placeholders**, not clinical thresholds. They must not be used to identify or exclude pre-eclampsia.
-
-## Current limitations
-
-- No clinical validation has been performed.
-- No pregnancy-specific PAT reference range is established by this project.
-- The simple PPG foot and ECG R-peak algorithms are experimental.
-- The initial signal-quality module is only a placeholder.
-- The PAT engine expects timestamps in the same clock domain; this is not yet solved by the raw sensor sketches.
-- MAX30102 FIFO timing and overflow handling need implementation before PAT values can be trusted.
-- Persistent calibration storage, data export, BLE and mobile UI are not implemented in the main sketch.
-- The button logic is a UI event scaffold, not actual power switching or deep sleep.
 
 ## Contributing / next work
 
