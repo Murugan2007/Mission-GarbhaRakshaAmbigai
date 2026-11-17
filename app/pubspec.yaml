@@ -1,0 +1,22 @@
+name: garbha_raksha_app
+description: Companion app for the Mission GarbhaRaksha pre-eclampsia early-warning wearable. Reads risk summaries over BLE, keeps a private on-phone history, and turns pulse-timing trends into plain-language prompts.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_blue_plus: ^1.31.13
+  sqflite: ^2.3.0
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
